@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Breaking Bad",
+    "channel": "AMC",
+    "seasons": 5,
+    "episodes": 62,
+    "release": "20/01/2008",
+    "description": "Ambientada y filmada en Albuquerque, Nuevo México, la serie cuenta la historia de Walter White, un profesor de química de escuela secundaria deprimido y en apuros a quien se le diagnostica cáncer de pulmón.",
+    "webpage": "https://www.amc.com/shows/breaking-bad",
+    "poster": "https://i.imgur.com/GGje0vc.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Orange Is the New Black",
+    "channel": "Netflix",
+    "seasons": 6,
+    "episodes": 91,
+    "release": "11/07/2013",
+    "description": "La serie gira en torno a Piper Chapman, una mujer de unos treinta años que vive en la ciudad de Nueva York y que es sentenciada a 15 meses en la penitenciaría de Litchfield.",
+    "webpage": "https://www.netflix.com/co/title/70242311",
+    "poster": "https://i.imgur.com/EvKe48G.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Juego de Tronos",
+    "channel": "HBO",
+    "seasons": 7,
+    "episodes": 73,
+    "release": "17/04/2011",
+    "description": "Serie inspirada en la saga Canción de hielo y fuego, escrita por George R. R. Martin. Relata las vivencias de un grupo de personajes de distintas casas nobiliarias en el continente ficticio de Poniente para tener el control del Trono de Hierro y gobernar los siete reinos que conforman el territorio.",
+    "webpage": "https://www.hbo.com/game-of-thrones",
+    "poster": "https://i.imgur.com/TDCEV1S.jpg"
+  },
+  {
+    "id": 4,
+    "name": "The Big Bang Theory",
+    "channel": "CBS",
+    "seasons": 12,
+    "episodes": 279,
+    "release": "24/09/2007", 
+    "description": "En el curso de la serie se muestra la dificultad de los protagonistas masculinos para relacionarse con personas de fuera de su entorno, principalmente de sexo femenino, dando lugar a situaciones cómicas.",
+    "webpage": "https://www.cbs.com/shows/big_bang_theory/about/",
+    "poster": "https://i.imgur.com/uAEpVWk.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Sherlock",
+    "channel": "BBC",
+    "seasons": 4,
+    "episodes": 13,
+    "release": "25/07/2010",
+    "description": "Sherlock representa al detective consultor Sherlock Holmes resolviendo varios misterios en el Londres actual.",
+    "webpage": "https://www.bbc.co.uk/programmes/b018ttws",
+    "poster": "https://i.imgur.com/02B7qhj.jpg"
+  },
+  {
+    "id": 6,
+    "name": "A Very English Scandal",
+    "channel": "BBC",
+    "seasons": 2,
+    "episodes": 3,
+    "release": "20/05/2018",
+    "description": "Narra uno de los eventos más llamativos de la política inglesa de la segunda mitad del siglo XX.",
+    "webpage": "https://www.bbc.co.uk/programmes/p065smy4",
+    "poster": "https://i.imgur.com/D4y3DrQ.jpg"
+  }
+]

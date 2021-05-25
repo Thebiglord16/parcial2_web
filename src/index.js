@@ -1,14 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {IntlProvider} from 'react-intl'
 import './index.css';
 import App from './App';
+import SeriesList from './components/seriesList'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import messages_es from './locale/series-es.json'
+import messages_en from './locale/series-es.json'
+
+let messages = {
+  'es': messages_es,
+  'en': messages_en
+}
+
+const language = navigator.language.split('-')[0]
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <IntlProvider locale ={language} messages = {messages[language]}>
+    {console.log(language)}
+    <SeriesList/>
+  </IntlProvider>,
   document.getElementById('root')
 );
 
