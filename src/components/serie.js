@@ -1,8 +1,13 @@
 import React from 'react'
-
 const Serie = (props) =>{
+
+    const clickShow= () =>{
+        console.log("haha")
+        props.detalle(props.serie)
+    }
+    
     return(
-        <tr>
+        <tr onClick={clickShow}>
             <th scope="row">{props.serie.id}</th>
             <td>{props.serie.name}</td>
             <td>{props.serie.channel}</td>
