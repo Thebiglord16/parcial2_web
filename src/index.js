@@ -29,7 +29,7 @@ let titles={
 };
 
 let imgErrors = {
-  'es': "hubo un problema mientras cargaba la imagen",
+  'es': "Hubo un problema mientras cargaba la imagen",
   'en': "Error while loading the image."
 };
 
