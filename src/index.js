@@ -5,14 +5,10 @@ import './index.css';
 import SeriesList from './components/seriesList'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import messages_es from './locale/series-es.json'
-import messages_en from './locale/series-en.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
-let messages = {
-  'es': messages_es,
-  'en': messages_en
-}
+import Graph from './components/graph';
+
 let titles={
   'es':{
     'numeral':"#",
@@ -30,18 +26,39 @@ let titles={
     'episodes':'Episodes',
     'release':'Release Date'
   }
-}
+};
 
-const language = navigator.language.split('-')[0]
+let imgErrors = {
+  'es': "hubo un problema mientras cargaba la imagen",
+  'en': "Error while loading the image."
+};
 
-ReactDOM.render(
-  <IntlProvider locale ={language} messages = {{'series':messages[language], 'titles':titles[language]}}>
-    {console.log(language)}
-    <App/>
-    <SeriesList/>
-  </IntlProvider>,
-  document.getElementById('root')
-);
+const language = navigator.language.split('-')[0];
+
+fetch("https://gist.githubusercontent.com/josejbocanegra/c55d86de9e0dae79e3308d95e78f997f/raw/a467415350e87c13faf9c8e843ea2fd20df056f3/series-es.json")
+.then((res) => res.json())
+.then((res) => {
+  const es = res;
+  fetch("https://gist.githubusercontent.com/josejbocanegra/5dc69cb7feb7945ef58b9c3d84be2635/raw/e2d16f7440d51cae06a9daf37b0b66818dd1fe31/series-en.json")
+  .then((res) => res.json())
+  .then((res) => {
+    const en = res;
+    const messages ={
+      'es' : es,
+      'en' : en
+    };
+    ReactDOM.render(
+      <IntlProvider locale ={language} messages = {{'series':messages[language], 'titles':titles[language], 'imgErrors':imgErrors[language]}}>
+        <App/>
+        <SeriesList/>
+        <Graph/>
+      </IntlProvider>,
+      document.getElementById('root')
+    );
+  });
+});
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

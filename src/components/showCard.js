@@ -1,10 +1,24 @@
 import React from 'react'
 import './showCard.css'
 const Show = (props) =>{
+    const carTop = ()=>{
+        if(navigator.onLine){
+            return(
+                <img className="card-img-top" src={props.serie.poster} alt ={props.imgErrors} ></img>
+            )
+        }
+        else{
+            return(
+                <p className="card-text">
+                        {props.imgErrors}
+                    </p>
+            )
+        }
+    }
     if (props.serie !== undefined){
         return(
             <div className="card">
-                <img className="card-img-top" src={props.serie.poster} alt ={props.serie.name} ></img>
+                {carTop()}
                 <div className="card-body">
                     <p className="card-text">
                         {props.serie.description}

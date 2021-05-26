@@ -9,7 +9,7 @@ const SeriesList = () => {
     const intl = useIntl();
     const series = intl.messages.series;
     const titles = intl.messages.titles;
-    console.log(series)
+    const imgErrors = intl.messages.imgErrors;
     const [serie, setSerie] = useState()
     return (
       <div className="row">
@@ -32,7 +32,7 @@ const SeriesList = () => {
               </tbody>
             </table>
             <div className="col">
-              <Show serie={serie}/>
+              <Show serie={serie} imgErrors={imgErrors}/>
             </div>
           </div>
         </div>
